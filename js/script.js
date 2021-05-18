@@ -25,7 +25,24 @@ const app = new Vue (
             }
         },
         methods: {
+            before: function() {
+                this.img.imageIndex--;
+                console.log(this.img.imageIndex);
 
+                if (this.img.imageIndex == -1) {
+                    this.img.imageIndex = (this.img.src.length - 1);
+                }
+                console.log(this.img.imageIndex);
+            },
+            after: function() {
+                this.img.imageIndex++;
+                console.log(this.img.imageIndex);
+
+                if (this.img.imageIndex == this.img.src.length) {
+                    this.img.imageIndex = 0;
+                }
+                console.log(this.img.imageIndex);
+            }
         }
     }
 );
