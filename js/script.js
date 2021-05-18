@@ -30,7 +30,7 @@ const app = new Vue (
                 }
             }
         },
-        created: function() {
+        mounted: function() {
             const self = this;
             setInterval(function() {
                 self.imageIndex++
