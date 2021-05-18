@@ -21,7 +21,26 @@
 
     <body>
         <div id="root">
-            
+            <!-- WRAPPER -->
+            <div id="wrapper">
+                <!-- TITLE -->
+                <h1>Vue Slider</h1>
+                <!-- /TITLE -->
+                <!-- SLIDER -->
+                <div>
+                    <div id="chevron-before">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div id="image-box">
+                        <img :src="img.src[img.imageIndex]" :alt="img.alt">
+                    </div>
+                    <div id="chevron-after">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <!-- /SLIDER -->
+            </div>
+            <!-- /WRAPPER -->
         </div>
 
         <!-- SCRIPT JS -->
