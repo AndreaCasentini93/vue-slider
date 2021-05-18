@@ -35,7 +35,7 @@
                     <!-- /CHEVRON BEFORE -->
                     <!-- IMAGE BOX -->
                     <div id="image-box">
-                        <img :src="img.src[img.imageIndex]" :alt="img.alt">
+                        <img :src="images[imageIndex]" :alt="altPlaceholder">
                     </div>
                     <!-- /IMAGE BOX -->
                     <!-- CHEVRON AFTER -->
@@ -45,8 +45,8 @@
                     <!-- /CHEVRON AFTER -->
                     <!-- CIRCLE -->
                     <div id="circle">
-                        <i v-for="image, index in img.src"
-                        :class="img.imageIndex == index? 'fas' : 'far' " class="fa-circle" @click="img.imageIndex = index"></i>
+                        <i v-for="image, index in images"
+                        :class="imageIndex == index? 'fas' : 'far' " class="fa-circle" @click="imageIndex = index"></i>
                     </div>
                     <!-- /CIRCLE -->
                 </div>
