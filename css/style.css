@@ -8,7 +8,7 @@
 body {
     font-family: 'Texturina', serif;
 }
-/* ROOT */
+
 #root {
     display: flex;
     width: 100%;
@@ -25,11 +25,9 @@ body {
     height: 70%;
     margin: auto;
 }
-
 #wrapper div {
     display: flex;
 }
-
 #wrapper h1 {
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -40,6 +38,7 @@ body {
     text-shadow: 0px 0px 5px #000000;
 }
 
+/* CHEVRON */
 [id*="chevron-"] {
     display: flex;
     width: 15%;
@@ -57,6 +56,7 @@ body {
     transform: scale(1.3);
 }
 
+/* IMAGE */
 #image-box {
     width: 70%;
     height: 420px;
@@ -69,6 +69,7 @@ body {
     box-shadow: 3px 3px 10px #000000;
 }
 
+/* CIRCLES */
 #circles {
     position: absolute;
     bottom: 20px;
