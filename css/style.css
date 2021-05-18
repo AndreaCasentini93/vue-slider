@@ -86,6 +86,6 @@ body {
     cursor: pointer;
     transition: transform .2s;
 }
-#circles i:hover {
+#circles i:not([class*="fas"]):hover {
     transform: scale(1.3);
 }
