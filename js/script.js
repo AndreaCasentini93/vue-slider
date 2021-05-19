@@ -12,31 +12,37 @@ const app = new Vue (
                 "img/img7.jpg"
             ],
             altPlaceholder: "Immagine Paesaggio",
-            imageIndex: 0
+            imageIndex: 0,
+            autoPlay: ""
         },
         methods: {
             goToImage: function(newIndex) {
+                clearInterval(this.autoPlay);
                 this.imageIndex = newIndex;
             },
             before: function() {
                 this.imageIndex--;
-
                 if (this.imageIndex == -1) {
                     this.imageIndex = (this.images.length - 1);
                 }
             },
             after: function() {
                 this.imageIndex++;
-
                 if (this.imageIndex == this.images.length) {
                     this.imageIndex = 0;
                 }
+            },
+            clickBefore: function() {
+                clearInterval(this.autoPlay);
+                this.before();
+            },
+            clickAfter: function() {
+                clearInterval(this.autoPlay);
+                this.after();
             }
         },
         mounted: function() {
-            setInterval(() => {
-                this.after();              
-            }, 3000);
+            this.autoPlay = setInterval(this.after, 3000);
         }
     }
 );
