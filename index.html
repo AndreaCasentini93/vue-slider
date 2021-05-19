@@ -44,7 +44,7 @@
                     <!-- CIRCLE -->
                     <div id="circles">
                         <i v-for="image, index in images"
-                        :class="(imageIndex == index?'fas': 'far')" class="fa-circle" @click="imageIndex = index"></i>
+                        :class="(imageIndex == index?'fas': 'far')" class="fa-circle" @click="goToImage(index)"></i>
                     </div>
                     <!-- /CIRCLE -->
                 </div>

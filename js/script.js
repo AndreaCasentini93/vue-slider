@@ -12,9 +12,12 @@ const app = new Vue (
                 "img/img7.jpg"
             ],
             altPlaceholder: "Immagine Paesaggio",
-            imageIndex: 0,
+            imageIndex: 0
         },
         methods: {
+            goToImage: function(newIndex) {
+                this.imageIndex = newIndex;
+            },
             before: function() {
                 this.imageIndex--;
 
