@@ -36,10 +36,7 @@ const app = new Vue (
         mounted: function() {
             const self = this;
             setInterval(function() {
-                self.imageIndex++
-                if (self.imageIndex == self.images.length) {
-                    self.imageIndex = 0;
-                }                
+                self.after();              
             }, 3000);
         }
     }
