@@ -34,9 +34,8 @@ const app = new Vue (
             }
         },
         mounted: function() {
-            const self = this;
-            setInterval(function() {
-                self.after();              
+            setInterval(() => {
+                this.after();              
             }, 3000);
         }
     }
